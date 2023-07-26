@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/white"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:id="@+id/nameCard"
+            android:text="Starship"/>
+        <TextView
+            android:layout_below="@+id/nameCard"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:id="@+id/title"
+            android:text="Title: "/>
+        <TextView
+            android:layout_below="@+id/nameCard"
+            android:id="@+id/titleU"
+            android:textSize="18sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:layout_toEndOf="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleU"
+            android:textSize="18sp"
+            android:id="@+id/model"
+            android:textColor="@color/black"
+            android:text="Model:"/>
+
+        <TextView
+            android:id="@+id/modelU"
+            android:textSize="18sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:layout_toEndOf="@+id/model"
+            android:layout_below="@+id/titleU"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/modelU"
+            android:textSize="18sp"
+            android:id="@+id/manufacturer"
+            android:textColor="@color/black"
+            android:text="Manufacturer:"/>
+
+        <TextView
+            android:id="@+id/manufacturerU"
+            android:textSize="18sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:layout_toEndOf="@+id/manufacturer"
+            android:layout_below="@+id/modelU"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/manufacturerU"
+            android:textSize="18sp"
+            android:id="@+id/passengers"
+            android:textColor="@color/black"
+            android:text="Passengers:"/>
+
+        <TextView
+            android:id="@+id/passengersU"
+            android:textSize="18sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:text=""
+            android:layout_toEndOf="@+id/passengers"
+            android:layout_below="@+id/manufacturerU"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddFavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Add Favorite"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/passengersU"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+            android:id="@+id/rvCard"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnAddFavorite"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
